@@ -1,0 +1,71 @@
+<?xml version = "1.0" encoding ="UTF-8" ?>
+<odoo>
+	<report 
+    id="masse salariale"
+    string="Masse Salariale Par Categorie"
+    model="hr_massesalarialemoy"
+    report_type="qweb-html"
+    file="Gestion_Paie.report_massesalariale"
+    name="Gestion_Paie.report_massesalariale_view"
+    groups = "base.group_user"
+    attachment_use="True"
+    menu = "True"/>
+
+
+<template id="report_massesalariale_view">
+     <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div>
+                       <h3 style= "text-align:center;"> <FONT COLOR= "Blue">MASSE SALARIALE DES EMPLOYES PAR CATEGORIE</FONT></h3>
+                       <h3 style= "text-align:center;"> <FONT COLOR= "Red"><u><span t-field="o.concat"/></u></FONT></h3>
+                    </div>
+                </div> 
+
+		 	<table class = 'table table-sm'>
+			        		<thead style="border:2px solid #000000;">
+			                      <tr style="border:2px solid;">
+                                      <th style="border:2px solid;"><strong><i>Numero</i></strong></th>
+			                          <th style="border:2px solid;"><strong><i>Matricule</i></strong></th>
+			                      	  <th style="border:2px solid;"><strong><i>Nom/Prenom(s)</i></strong></th>
+			                      	  <th style="border:2px solid;"><strong><i>Categorie</i></strong></th>
+                                      <th style="border:2px solid;"><strong><i>Echelle</i></strong></th>
+                                      <th style="border:2px solid;"><strong><i>Echellon</i></strong></th>
+                                      <th style="border:2px solid;"><strong><i>Salaire Net(francs CFA)</i></strong></th>
+			                    </tr>
+			                </thead>
+                             <tbody>
+                                 <tr style="border:2px solid;" t-foreach="o.x_line_ids" t-as="line">
+			                        <td style="border:2px solid;"><span t-field="line.numero"/></td>
+			                        <td style="border:2px solid;"><span t-field="line.mat"/></td>
+			                        <td style="border:2px solid;"><span t-field="line.nom"/></td>
+			                        <td style="border:2px solid;"><span t-field="line.categorie"/></td>
+                                     <td style="border:2px solid;"><span t-field="line.echelle"/></td>
+                                     <td style="border:2px solid;"><span t-field="line.echelon"/></td>
+                                     <td style="border:2px solid;text-align:right"><span t-esc="'{:,}'.format(int(line.net)).replace(',', ' ')"/></td>
+
+
+
+
+                                 </tr>
+
+
+
+			                </tbody>
+
+
+
+		        </table>
+            <p style=" widht:100%;font-weight:bold;text-align:right"> Total : <span style="color:red;" t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/>  francs CFA.</p>
+                <p style=" widht:100%">
+                                        Arrêté à la somme de :
+                                          <span t-field="o.x_mnt_en_lettre"/> (<span style="color:red;font-weight:bold" t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/>)  francs CFA.
+                                    </p>
+                <p style=" widht:100%"> Masse Salariale Moyenne Des Employés Par Categorie : <span style="color:red;font-weight:bold" t-esc="'{:,}'.format(int(o.x_sal_moy)).replace(',', ' ')"/>  francs CFA.</p>
+            </t>
+         </t>
+    </t> 
+</template>
+
+</odoo>

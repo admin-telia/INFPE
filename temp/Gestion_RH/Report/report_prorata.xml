@@ -1,0 +1,282 @@
+<?xml version = "1.0" encoding ="UTF-8" ?>
+<odoo>
+	<report 
+    id="gestion_prorata"
+    string="Bulletin de paie"
+    model="hr_prorata" 
+    report_type="qweb-html"
+    file="Gestion_RH.report_prorata" 
+    name="Gestion_RH.report_prorata_view"
+    groups = "base.group_user"
+    attachment_use="True"
+    menu = "True"/>
+
+
+<template id="report_prorata_view">
+     <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <div>
+                       <h3 style= "text-align:center;"> <FONT COLOR= "Blue">Bulletin de Paie</FONT></h3>
+                       <h3 style= "text-align:center;"> <FONT COLOR= "Red"><u><span t-field="o.concat"/></u></FONT></h3>
+                    </div>
+                </div> 
+         <p style="text-align:left; widht:100%"><strong>1.INFORMATIONS PERSONNELLES ET PROFESSIONNELLES</strong>
+         </p>
+		            
+		 <table class='table table-sm'>
+		 	<t t-if="o.x_type_employe  in ('Fonctionnaire Detaché','FONCTIONNAIRE DETACHE','Fonctionnaire Mis à Disposition','FONCTIONNAIRE MIS A DISPOSITION','Hospitalo-Universitaire','HOSPITALO-UNIVERSITAIRE') " >
+            <tr style = "border: 2px SOLID #089CB8" >
+            	<td style = "border: 2px SOLID #089CB8"><strong>Nombre de jours effectifs </strong></td>
+                <td style = "border: 2px SOLID #089CB8"> <span t-field="o.nbre_jour_effectif"/></td>
+                <td style = "border: 2px SOLID #089CB8"><strong>Nombre de jours réels </strong></td>
+                <td style = "border: 2px SOLID #089CB8"> <span t-field="o.nbre_jour_reel"/></td>
+            </tr>
+            <tr style = "border: 2px SOLID #089CB8" >
+                    <td style = "border: 2px SOLID #089CB8"><strong>Nom/Prénom(s)  </strong></td>
+                    <td style = "border: 2px SOLID #089CB8"> <span t-field="o.employee_id.name"/></td>
+                    
+                    <td style = "border: 2px SOLID #089CB8"><strong>Matricule  </strong></td>
+                    <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_matricule_f"/></td>
+            </tr>
+            <tr style = "border: 2px SOLID #089CB8">
+            	<td style = "border: 2px SOLID #089CB8"><strong>Classe </strong></td>
+            	<td style = "border: 2px SOLID #089CB8"><span t-field="o.x_classe"/></td>
+            	
+                <td style = "border: 2px SOLID #089CB8"><strong>Catégorie  </strong></td>
+                <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_categorie"/></td>
+            </tr>
+            <tr style = "border: 2px SOLID #089CB8" >
+            
+                <td style = "border: 2px SOLID #089CB8"><strong>Echelle </strong></td>
+                <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_echelle"/></td>
+                
+                <td style = "border: 2px SOLID #089CB8"><strong>Echelon</strong></td>
+                <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_echellon"/></td>
+            </tr>
+            <tr style = "border: 2px SOLID #089CB8" >
+            
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Charge  </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.charge_p"/></td>
+                
+                     <td style = "border: 2px SOLID #089CB8"><strong>Service </strong></td>
+                     <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_service"/></td>
+
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Emploi  </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_emploi"/></td> 
+                
+                     <td style = "border: 2px SOLID #089CB8"><strong>Fonction </strong></td>
+                     <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_fonction"/></td>
+
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Banque  </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_banque"/></td> 
+                
+                     <td style = "border: 2px SOLID #089CB8"><strong>N° Compte  </strong></td>
+                     <td style = "border: 2px SOLID #089CB8"><span t-field="o.num_banque"/></td>
+
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Type d'employé  </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_type_employe"/></td> 
+                	 
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Allocation Famillial </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.allocation_prorata)) .replace(',', ' ')"/></td>
+                
+             </tr>
+        </t>
+		<t t-if="o.x_type_employe  in ('Contractuel','CONTRACTUEL') " >
+          <tr style = "border: 2px SOLID #089CB8" >
+                  <td style = "border: 2px SOLID #089CB8"><strong>Nom/Prénom(s)  </strong></td>
+                  <td style = "border: 2px SOLID #089CB8"> <span t-field="o.employee_id.name"/></td>
+                  
+                  <td style = "border: 2px SOLID #089CB8"><strong>Matricule  </strong></td>
+                  <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_matricule_c"/></td>
+          </tr>
+          <tr style = "border: 2px SOLID #089CB8">
+          	<td style = "border: 2px SOLID #089CB8"><strong>Type employé </strong></td>
+          	<td style = "border: 2px SOLID #089CB8"><span t-field="o.x_classe"/></td>
+          	
+              <td style = "border: 2px SOLID #089CB8"><strong>Catégorie  </strong></td>
+              <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_categorie_c"/></td>
+          </tr>
+          <tr style = "border: 2px SOLID #089CB8" >
+          
+              <td style = "border: 2px SOLID #089CB8"><strong>Echelle </strong></td>
+              <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_echelle"/></td>
+              
+              <td style = "border: 2px SOLID #089CB8"><strong>Echelon</strong></td>
+              <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_echellon"/></td>
+          </tr>
+          <tr style = "border: 2px SOLID #089CB8" >
+          
+          		  <td style = "border: 2px SOLID #089CB8"><strong>Emploi</strong></td>
+              	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.charge"/></td>
+              
+                   <td style = "border: 2px SOLID #089CB8"><strong>Service </strong></td>
+                   <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_service"/></td>
+
+           </tr>
+           <tr style = "border: 2px SOLID #089CB8" >
+            
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Emploi  </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_emploi"/></td> 
+                
+                     <td style = "border: 2px SOLID #089CB8"><strong>Fonction </strong></td>
+                     <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_fonction"/></td>
+
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Banque  </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_banque"/></td> 
+                
+                     <td style = "border: 2px SOLID #089CB8"><strong>N° Compte  </strong></td>
+                     <td style = "border: 2px SOLID #089CB8"><span t-field="o.num_banque"/></td>
+
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Type d'employé  </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8"><span t-field="o.x_type_employe"/></td> 
+                	 
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Allocation Famillial </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.allocation_prorata)) .replace(',', ' ')"/></td>
+                
+             </tr>
+             
+		</t>	        
+		 </table> 
+		 <p style="text-align:left; widht:100%"><strong>2.ELEMENTS DE SALAIRE</strong>
+         </p>
+		            
+		 <table class='table table-sm'>
+		 	
+			  <tr style = "border: 2px SOLID #089CB8" >
+            	<t t-if="o.mnt_prorata_salaire != 0" >
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Salaire de base</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_salaire)) .replace(',', ' ')"/></td> 
+                </t> 
+                <t t-if="o.mnt_prorata_resp != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Responsabilite </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_resp)) .replace(',', ' ')"/></td>
+                 </t>  
+                 <t t-if="o.mnt_prorata_astr != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Astreinte </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_astr)) .replace(',', ' ')"/></td>
+                </t>
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            	<t t-if="o.mnt_prorata_trans != 0" >
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Transp</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_trans)) .replace(',', ' ')"/></td> 
+                </t> 
+                <t t-if="o.mnt_prorata_loge != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Logement </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_loge)) .replace(',', ' ')"/></td>
+                 </t>  
+                 <t t-if="o.mnt_prorata_techn != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Technicite </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_techn)) .replace(',', ' ')"/></td>
+                </t>
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            	<t t-if="o.mnt_prorata_spec != 0" >
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Spec.GRH</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_spec)) .replace(',', ' ')"/></td> 
+                </t> 
+                <t t-if="o.mnt_prorata_it != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.IT </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_it)) .replace(',', ' ')"/></td>
+                 </t>  
+                 <t t-if="o.mnt_prorata_ifc != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.IFC </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_ifc)) .replace(',', ' ')"/></td>
+                </t>
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+            	<t t-if="o.mnt_prorata_inf != 0" >
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Informatique</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_inf)) .replace(',', ' ')"/></td> 
+                </t> 
+                <t t-if="o.mnt_prorata_explot != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Exploit </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_explot)) .replace(',', ' ')"/></td>
+                 </t>  
+                 <t t-if="o.mnt_prorata_resp_financ != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Resp.Financ</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_resp_financ)) .replace(',', ' ')"/></td>
+                </t>
+             </tr>
+             
+             <tr style = "border: 2px SOLID #089CB8" >
+            	<t t-if="o.mnt_prorata_inf != 0" >
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Informatique</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_inf)) .replace(',', ' ')"/></td> 
+                </t> 
+                <t t-if="o.mnt_prorata_garde != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Garde </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_garde)) .replace(',', ' ')"/></td>
+                 </t>  
+                 <t t-if="o.mnt_prorata_risque != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Risque</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_risque)) .replace(',', ' ')"/></td>
+                </t>
+             </tr>
+             
+             <tr style = "border: 2px SOLID #089CB8" >
+            	<t t-if="o.mnt_prorata_sujetion != 0" >
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Sujetion</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_sujetion)) .replace(',', ' ')"/></td> 
+                </t> 
+                <t t-if="o.mnt_prorata_formation != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Formation </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_formation)) .replace(',', ' ')"/></td>
+                 </t>  
+                 <t t-if="o.mnt_prorata_veste != 0" >
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Veste</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_veste)) .replace(',', ' ')"/></td>
+                </t>
+             </tr>
+             
+             <tr style = "border: 2px SOLID #089CB8" >
+            	<t t-if="o.mnt_prorata_caisse != 0" >
+            		 <td style = "border: 2px SOLID #089CB8"><strong>Indem.Sujetion</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.mnt_prorata_caisse)) .replace(',', ' ')"/></td> 
+                </t> 
+               
+                
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+             		<td style = "border: 2px SOLID #089CB8"><strong>Remuneration.Totale </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.x_remuneration_total_prorata)) .replace(',', ' ')"/></td>
+                	 <td style = "border: 2px SOLID #089CB8"><strong>Carfo </strong></td>       	 
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.x_mnt_carfo_p)) .replace(',', ' ')"/></td>
+                	 <td style = "border: 2px SOLID #089CB8"><strong>CNSS </strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.x_mnt_cnss_p)) .replace(',', ' ')"/></td>
+                
+             </tr>
+             <tr style = "border: 2px SOLID #089CB8" >
+             		<td style = "border: 2px SOLID #089CB8"><strong>IUTS NET</strong></td>
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right"><span t-esc="'{:,}'.format(int(o.x_iuts_net_p)) .replace(',', ' ')"/></td>
+                	 <td style = "border: 2px SOLID #089CB8;background-color:#089CB8"><strong>Net à payer </strong></td>       	 
+                	 <td style = "border: 2px SOLID #089CB8;text-align:right;"><strong><FONT COLOR= "red"><span  t-esc="'{:,}'.format(int(o.x_net_payer_ctrct_p)) .replace(',', ' ')"/></FONT></strong></td>
+                	 
+                
+             </tr>
+             
+             
+		</table>	  
+            </t>
+         </t>
+    </t> 
+</template>
+
+</odoo>
