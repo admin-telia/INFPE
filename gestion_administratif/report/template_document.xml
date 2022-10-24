@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_document">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;margin-top:100px;font-weight:bolder;font-style:italic;text-decoration:underline;text-align:center;"><span t-field="o.titre"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span><span t-field="o.phrase1"></span>  <span style="font-weight:bolder;" t-field="o.employe"></span>, matricule <span style="font-weight:bolder;" t-field="o.matricule"></span>, <span style="font-weight:bolder;" t-field="o.fonction"></span> <span t-field="o.phrase2"></span> du <span style="font-weight:bolder;" t-field="o.date_d"></span> au <span style="font-weight:bolder;" t-field="o.date_f"></span></span>.
+								<br/><br/><span t-field="o.phrase3"></span>
+							</p>
+							<p style="font-size:30px;margin-top:40px;text-align:right;">
+							<span t-field="o.phrase4"></span> <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d %B %Y')"/>
+							</p>
+							<p style="font-size:30px;margin-top:50px;margin-left:400px;text-align:right;font-weight:bolder;">
+							<span t-field="o.phrase5"></span></p>
+								
+							<h2 style="text-align:right;margin-top:100px;"><span style="font-weight:bolder; text-decoration:underline;" t-field="o.phrase6"></span><br/><span style="margin-left:300px;" t-field="o.phrase7"></span></h2>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

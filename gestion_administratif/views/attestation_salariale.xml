@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="attestation_salariale_tree_view">
+		<field name="name">Attestation de prise en charge salariale</field>
+		<field name="model">document.attestationsalariale</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe5"></field>
+				<field name="matricule5"></field>
+				<field name="fonction5"></field>
+				<field name="date_d5"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="attestation_salariale_form_view">
+		<field name="name">Attestation de prise en charge salariale</field>
+		<field name="model">document.attestationsalariale</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre5"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase59"></field>
+							<field name="employe5"></field>
+						</group>
+						<group>
+							<field name="matricule5"></field>
+							<field name="fonction5"></field>
+						</group>
+						<group>
+							<field name="phrase60"></field>
+							<field name="phrase61"></field>
+						</group>
+						<group>
+							<field name="date_d5"></field>
+						</group>
+						<group>
+							<field name="phrase62"></field>
+							<field name="phrase64"></field>
+						</group>
+						<group>
+							<field name="phrase63"></field>
+							<field name="phrase65"></field>
+						</group>
+						<group>
+							<field name="phrase66"></field>
+						</group>
+						<group>
+							<field name="phrase67"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

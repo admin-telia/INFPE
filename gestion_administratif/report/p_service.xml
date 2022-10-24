@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.actions.report" id="report_service1">
+		<field name="name">Certificat de prise de service</field>
+		<field name="model">document.priseservice</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">gestion_administratif.report_service1</field>
+		<field name="report_file">gestion_administratif.report_service1</field>
+		<field name="binding_model_id" ref="model_document_priseservice"/>
+		<field name="binding_type">report</field>
+	</record>
+</odoo>

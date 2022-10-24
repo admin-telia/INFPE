@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="decision_nomination_tree_view">
+		<field name="name">Décision nomination</field>
+		<field name="model">document.decisionnomination</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="agent_id"></field>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="agent_nomination_tree_view">
+		<field name="name">Décision nomination</field>
+		<field name="model">document.agentnomme</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe_id"></field>
+				<field name="matricule"></field>
+				<field name="emplois"></field>
+				<field name="poste_id"></field>
+			</tree>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="agent_nomination_form_view">
+		<field name="name">Décision nomination</field>
+		<field name="model">document.agentnomme</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<group>
+							<field name="employe_id"></field>
+							<field name="matricule"></field>
+						</group>
+						<group>
+							<field name="emplois"></field>
+							<field name="poste_id"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="decision_nomination_form_view">
+		<field name="name">Décision nomination</field>
+		<field name="model">document.decisionnomination</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="t4"></field>
+					</group>
+					<group>
+						<field name="pr1"></field>
+					</group>
+					<group>
+						<field name="pr2"></field>
+					</group>
+					<group>
+						<field name="pr3"></field>
+					</group>
+					<group>
+						<field name="pr4"></field>
+					</group>
+					<group>
+						<field name="pr5"></field>
+					</group>
+					<group>
+						<field name="pr6"></field>
+					</group>
+					<group>
+						<field name="pr7"></field>
+					</group>
+					<group>
+						<field name="pr8"></field>
+					</group>
+					<group>
+						<field name="pr9"></field>
+					</group>
+					<group>
+						<field name="pr10"></field>
+					</group>
+					<group>
+						<field name="pr11"></field>
+					</group>
+					<group>
+						<field name="pr12"></field>
+					</group>
+					<group>
+						<field name="pr13"></field>
+					</group>
+					<group>
+						<field name="pr14"></field>
+					</group>
+					<group>
+						<field name="pr15"></field>
+					</group>
+					<group>
+						<field name="pr16"></field>
+					</group>
+					<group>
+						<field name="pr17"></field>
+					</group>
+					<group>
+						<group>
+							<field name="pr18"></field>
+						</group>
+						<group>
+							<field name="pr19"></field>
+						</group>
+						<group>
+							<field name="pr20"></field>
+						</group>
+						<group>
+							<field name="pr21"></field>
+						</group>
+						<group>
+							<field name="pr22"></field>
+						</group>
+						<group>
+							<field name="pr23"></field>
+						</group>
+						<group>
+							<field name="pr24"></field>
+						</group>
+						<group>
+							<field name="pr25"></field>
+						</group>
+						<group>
+							<field name="pr26"></field>
+						</group>
+						<group>
+							<field name="pr27"></field>
+						</group>
+						<group>
+							<field name="pr28"></field>
+						</group>
+						<group>
+							<field name="pr29"></field>
+						</group>
+						<group>
+							<field name="pr30"></field>
+						</group>
+						<group>
+							<field name="pr31"></field>
+						</group>
+						<group>
+							<field name="pr32"></field>
+						</group>
+						<group>
+							<field name="pr33"></field>
+						</group>
+						<group>
+							<field name="pr34"></field>
+						</group>
+						<group>
+							<field name="pr35"></field>
+						</group>
+						<group>
+							<field name="pr36"></field>
+						</group>
+					</group>
+					<notebook>
+						<page name="agent" string="Agent">
+							<field name="agent_id"></field>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<!--<record model="ir.ui.view" id="poste_affectation_tree_view">
+		<field name="name">Poste d'affectation</field>
+		<field name="model">document.posteaffectation</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="n_poste"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="poste_affectation_form_view">
+		<field name="name">Poste d'affectation</field>
+		<field name="model">document.posteaffectation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="n_poste"></field>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>-->
+
+	<!--<record model="ir.actions.act_window" id="poste_affectation_action_view">
+		<field name="name">Poste Affectation</field>
+		<field name="res_model">document.posteaffectation</field>
+		<field name="view_mode">tree,form</field>
+	</record>-->
+</odoo>

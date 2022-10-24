@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.actions.act_window" id="attestation_salariale_action_view">
+		<field name="name">Attestation de prise en charge salariale</field>
+		<field name="res_model">document.attestationsalariale</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="autorisation_absence_action_view">
+		<field name="name">Autorisation Absence</field>
+		<field name="res_model">document.absence</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="autorisation_conge_action_view">
+		<field name="name">Autorisation Conge</field>
+		<field name="res_model">document.conge</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="certificat_administratif_action_view">
+		<field name="name">Certificat adinistratif</field>
+		<field name="res_model">document.certificatadministratif</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="certificat_travail_action_view">
+		<field name="name">Certificat de travail</field>
+		<field name="res_model">document.certificattravail</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="cessation_service_action_view">
+		<field name="name">Certificat de cessation de service</field>
+		<field name="res_model">document.cessationservice</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="conge_administratif_action_view">
+		<field name="name">Congés administratifs</field>
+		<field name="res_model">document.congeadministratif</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="conge_maternite_action_view">
+		<field name="name">Conge de maternité</field>
+		<field name="res_model">document.congematernite</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="decision_affectation_action_view">
+		<field name="name">Décision Affectation</field>
+		<field name="res_model">document.decisionaffectation</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="poste_affectation_action_view">
+		<field name="name">Poste Affectation</field>
+		<field name="res_model">document.posteaffectation</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="decision_nomination_action_view">
+		<field name="name">Décision nomination</field>
+		<field name="res_model">document.decisionnomination</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="document_action_view">
+		<field name="name">Documents administratifs</field>
+		<field name="res_model">document.administratifs</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="paiement_cessation_action_view">
+		<field name="name">Certificat de cessation de paiement</field>
+		<field name="res_model">document.paiement</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="prime_rendement_action_view">
+		<field name="name">Prime rendement</field>
+		<field name="res_model">document.primerendement</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="prise_service_action_view">
+		<field name="name">Certificat de prise de service</field>
+		<field name="res_model">document.priseservice</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="suspension_contrat_action_view">
+		<field name="name">Décision de suspension de contrat</field>
+		<field name="res_model">document.suspensioncontrat</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="agent_af_action_view">
+		<field name="name">Agent affectation</field>
+		<field name="res_model">document.agentaffecte</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window" id="agent_nomme_action_view">
+		<field name="name">Agent nommé</field>
+		<field name="res_model">document.agentnomme</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+</odoo>

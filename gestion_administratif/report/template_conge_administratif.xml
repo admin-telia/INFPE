@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_conge_administratif">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;margin-top:100px;font-weight:bolder;font-style:normal;text-decoration:underline;text-align:center;"><span t-field="o.t1"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span t-field="o.ph1"></span><br/>
+								<span t-field="o.ph2"></span><br/>
+								<span t-field="o.ph3"></span><br/>
+								<span t-field="o.ph4"></span><br/>
+								<span t-field="o.ph5"></span><br/>
+								<span t-field="o.ph6"></span><br/>
+								<span t-field="o.ph7"></span><br/>
+								<span t-field="o.ph8"></span><br/>
+								<span t-field="o.ph9"></span><br/>
+								<span t-field="o.ph10"></span><br/>
+								<span t-field="o.ph11"></span><br/><br/><br/>
+								<h1 style="text-align:center;font-weight:bolder;" t-field="o.ph12"></h1>
+							</p>
+							<p style="margin-top:50px;font-size:30px;">
+								<span style="font-weight:bolder;text-decoration:underline;" t-field="o.ph13"></span> <span t-field="o.ph14"></span> 
+							</p>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

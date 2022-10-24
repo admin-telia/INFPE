@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="conge_tree_view">
+		<field name="name">Autorisation Conge</field>
+		<field name="model">document.conge</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe2"></field>
+				<field name="matricule2"></field>
+				<field name="fonction2"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="conge_form_view">
+		<field name="name">Autorisation Conge</field>
+		<field name="model">document.conge</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre2"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase20"></field>
+							<field name="employe2"></field>
+						</group>
+						<group>
+							<field name="matricule2"></field>
+							<field name="fonction2"></field>
+						</group>
+						<group>
+							<field name="phrase21"></field>
+						</group>
+						<group>
+							<field name="phrase22"></field>
+						</group>
+						<group>
+							<field name="phrase23"></field>
+							<field name="phrase25"></field>
+						</group>
+						<group>
+							<field name="phrase24"></field>
+							<field name="phrase26"></field>
+						</group>
+						<group>
+							<field name="phrase27"></field>
+							<field name="phrase29"></field>
+						</group>
+						<group>
+							<field name="phrase28"></field>
+							<field name="phrase30"></field>
+						</group>
+						<group>
+							<field name="phrase31"></field>
+							<field name="phrase33"></field>
+						</group>
+						<group>
+							<field name="phrase32"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

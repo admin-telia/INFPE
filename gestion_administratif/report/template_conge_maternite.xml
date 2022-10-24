@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_conge_maternite">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;margin-top:100px;font-weight:bolder;font-style:normal;text-decoration:underline;text-align:center;"><span t-field="o.titre13"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span t-field="o.phrase230"></span><br/>
+								<span t-field="o.phrase231"></span><br/>
+								<span t-field="o.phrase232"></span><br/>
+								<span t-field="o.phrase233"></span><br/>
+								<span t-field="o.phrase234"></span><br/>
+								<span t-field="o.phrase235"></span><br/>
+								<span t-field="o.phrase236"></span><br/>
+								<span t-field="o.phrase237"></span><br/>
+								<span t-field="o.phrase238"></span><br/>
+								<span t-field="o.phrase239"></span><br/><br/><br/>
+								<h1 style="text-align:center;text-decoration:underline;font-weight:bolder;" t-field="o.phrase240"></h1>
+							</p>
+							<p style="font-size:30px;">
+								<span style="font-weight:bolder;text-decoration:underline;" t-field="o.phrase241"></span> <span t-field="o.phrase242"></span> <span style="font-weight:bolder;" t-field="o.phrase243"></span> <span t-field="o.phrase244"></span> <span style="font-weight:bolder;" t-field="o.employe12"></span>, matricule <span style="font-weight:bolder;" t-field="o.matricule12"></span> <span style="font-weight:bolder;" t-field="o.fonction12"></span> <span t-field="o.phrase245"></span>
+							</p>
+							<p style="margin-top:20px;font-size:30px;">
+								<span style="font-weight:bolder;text-decoration:underline;" t-field="o.phrase246"></span> <span t-field="o.phrase247"></span>
+							</p>
+							<p style="margin-top:10px; text-align:justify;">
+								<span style=" font-size:30px;font-weight:bolder;text-decoration:underline;" t-field="o.phrase252"></span>
+								<br/>
+								<div style="display:flex;">
+									<div style="text-align:left;font-style:italic;">
+										<span t-field="o.phrase253"></span>
+										<span style="margin-left:100px;" t-field="o.phrase254"></span><br/>
+										<span t-field="o.phrase255"></span>
+										<span style="margin-left:110px;" t-field="o.phrase256"></span><br/>
+										<span t-field="o.phrase257"></span>
+										<span style="margin-left:110px;" t-field="o.phrase258"></span><br/>
+										<span t-field="o.phrase259"></span>
+										<span style="margin-left:70px;" t-field="o.phrase260"></span>
+									</div>
+									<div style="margin-top:30px;font-size:30px;margin-left:520px;">
+										<span t-field="o.phrase248"></span><br/><br/>
+										<span t-field="o.phrase249"></span><br/><br/><br/>
+										<span style="margin-top:80px;font-weight:bolder;text-decoration:underline;" t-field="o.phrase250"></span><br/>
+										<span style="font-style:italic;font-size:18px;" t-field="o.phrase251"></span>
+									</div>
+								</div>
+							</p>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

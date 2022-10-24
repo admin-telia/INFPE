@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_absence">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;margin-top:100px;font-weight:bolder;font-style:normal;text-decoration:underline;text-align:center;font-family:Algerian;"><span t-field="o.titre1"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span style="margin-left:50px;" t-field="o.phrase8"></span><br/><span style="margin-left:50px;" t-field="o.phrase9"></span> <span style="font-weight:bolder;" t-field="o.phrase10"></span> <span t-field="o.phrase11"></span>
+								<span style="font-weight:bolder;" t-field="o.employe1"></span>, matricule <span style="font-weight:bolder;" t-field="o.matricule1"></span>, <span style="font-weight:bolder;" t-field="o.fonction1"></span> <span t-field="o.phrase12"></span>.<br/><span style="font-weight:bolder;text-decoration:underline;" t-field="o.phrase13"></span>: <span style="font-weight:bolder;" t-field="o.date_d1"></span>.
+							</p>
+							<p style="margin-top:150px; text-align:justify;">
+								<span style=" font-size:30px;font-weight:bolder;text-decoration:underline;" t-field="o.phrase14"></span><br/>
+								<div style="display:flex;">
+									<div style="text-align:left;">
+										<span t-field="o.phrase15"></span>
+										<span style="margin-left:50px;" t-field="o.phrase16"></span>
+									</div>
+									<div style="font-weight:bolder; text-align:right;font-size:30px;">
+										<span t-field="o.phrase17"></span>
+									</div>
+								</div>
+							</p>
+							<h2 style="text-align:right;margin-top:100px;"><span style="font-weight:bolder; text-decoration:underline;" t-field="o.phrase18"></span><br/><span style="margin-left:300px;" t-field="o.phrase19"></span></h2>
+						</div>
+					</div>
+			</t>
+		</t>
+	</template>
+</odoo>

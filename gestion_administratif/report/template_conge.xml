@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_conge_jouissance1">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;margin-top:100px;font-weight:bolder;font-style:normal;text-decoration:underline;text-align:center;"><span t-field="o.titre2"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span t-field="o.phrase20"></span> <span style="font-weight:bolder;" t-field="o.employe2"></span>, matricule <span style="font-weight:bolder;" t-field="o.matricule2"></span>, <span style="font-weight:bolder;" t-field="o.fonction2"></span>, <span t-field="o.phrase21"></span> <span style="font-weight:bolder;" t-field="o.phrase22"></span> <span t-field="o.phrase23"></span>.<br/> 
+								<span t-field="o.phrase24"></span> <span style="font-weight:bolder;" t-field="o.phrase25"></span>.<br/>
+								<span t-field="o.phrase26"></span>
+							</p>
+							<p style="margin-top:40px; text-align:justify;">
+								<span style=" font-size:30px;font-weight:bolder;text-decoration:underline;" t-field="o.phrase27"></span><br/>
+								<div style="text-align:left;">
+									<span t-field="o.phrase28"></span>
+								</div>
+								<div style="font-weight:bolder;margin-top:50px; text-align:right;font-size:30px;">
+									<span t-field="o.phrase30"></span>
+								</div>
+								<div style="display:flex;">
+									<div style="margin-top:0px;font-size:30px;font-weight:bolder;text-align:right;margin-left:0px;padding-left:0px;margin-right:500px;">
+									<span t-field="o.phrase29"></span>
+									</div>
+								</div>
+							</p>
+							<div style="display:flex;margin-top:20px;">
+								<div style="text-align:left;"><h2><span style="font-weight:bolder; text-decoration:underline;" t-field="o.phrase31"></span></h2></div>
+								<div style="text-align:right;"><h2><span style="font-weight:bolder; text-decoration:underline;" t-field="o.phrase32"></span><br/><span style="margin-left:300px;font-size:25px;" t-field="o.phrase33"></span></h2></div>
+							</div>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

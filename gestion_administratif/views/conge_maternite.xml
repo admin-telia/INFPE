@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="conge_maternite_tree_view">
+		<field name="name">Congé de maternité</field>
+		<field name="model">document.congematernite</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe12"></field>
+				<field name="matricule12"></field>
+				<field name="fonction12"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="conge_maternite_form_view">
+		<field name="name">Congé de maternité</field>
+		<field name="model">document.congematernite</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre12"></field>
+					</group>
+					<group>
+						<field name="titre13"></field>
+					</group>
+					<group>
+						<field name="phrase230"></field>
+					</group>
+					<group>
+						<field name="phrase231"></field>
+					</group>
+					<group>
+						<field name="phrase232"></field>
+					</group>
+					<group>
+						<field name="phrase233"></field>
+					</group>
+					<group>
+						<field name="phrase234"></field>
+					</group>
+					<group>
+						<field name="phrase235"></field>
+					</group>
+					<group>
+						<field name="phrase236"></field>
+					</group>
+					<group>
+						<field name="phrase237"></field>
+					</group>
+					<group>
+						<field name="phrase238"></field>
+					</group>
+					<group>
+						<field name="phrase239"></field>
+					</group>
+					<group>
+						<field name="phrase240"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase241"></field>
+						</group>
+						<group>
+							<field name="phrase242"></field>
+						</group>
+						<group>
+							<field name="phrase243"></field>
+						</group>
+						<group>
+							<field name="phrase244"></field>
+						</group>
+						<group>
+							<field name="employe12"></field>
+						</group>
+						<group>
+							<field name="matricule12"></field>
+							<field name="fonction12"></field>
+						</group>
+						<group>
+							<field name="phrase245"></field>
+						</group>
+						<group>
+							<field name="phrase246"></field>
+						</group>
+						<group>
+							<field name="phrase247"></field>
+						</group>
+						<group>
+							<field name="phrase248"></field>
+						</group>
+						<group>
+							<field name="phrase249"></field>
+							<field name="phrase251"></field>
+						</group>
+						<group>
+							<field name="phrase250"></field>
+							<field name="phrase252"></field>
+						</group>
+						<group>
+							<field name="phrase253"></field>
+							<field name="phrase255"></field>
+						</group>
+						<group>
+							<field name="phrase254"></field>
+							<field name="phrase256"></field>
+						</group>
+						<group>
+							<field name="phrase257"></field>
+							<field name="phrase259"></field>
+						</group>
+						<group>
+							<field name="phrase260"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

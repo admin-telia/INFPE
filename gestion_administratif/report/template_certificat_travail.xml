@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_certificat_travail">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;margin-top:100px;font-weight:bolder;font-style:normal;text-decoration:underline;text-align:center;font-family:Algerian;"><span t-field="o.titre4"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span t-field="o.phrase47"></span> <span style="font-weight:bolder;" t-field="o.employe4"></span>, matricule <span style="font-weight:bolder;" t-field="o.matricule4"></span>, <span t-field="o.phrase48"></span>  <span style="font-weight:bolder;" t-field="o.fonction4"></span> du <span style="font-weight:bolder;" t-field="o.date_d4"></span> au <span t-field="o.date_f4"></span>.<br/> 
+								<span t-field="o.phrase49"></span>.<br/><br/>
+								<span t-field="o.phrase50"></span>.
+							</p>
+							<div style="margin-top:50px;font-size:30px;margin-left:520px;">
+								<span t-field="o.phrase51"></span>
+							</div>
+							<p style="margin-top:0px; text-align:justify;">
+								<div style="display:flex;">
+									<div style="text-align:left;font-style:italic;">
+										<span style=" font-size:30px;font-weight:bolder;text-decoration:underline;" t-field="o.phrase52"></span>
+										<br/>	
+										<span t-field="o.phrase53"></span><br/>
+										<span t-field="o.phrase54"></span><br/>
+									</div>
+								</div>
+							</p>
+							<div style="margin-top:50px;font-size:30px;margin-left:520px;text-align:right;">
+								<span t-field="o.phrase55"></span>
+							</div>
+							<h2 style="text-align:right;margin-top:80px;"><span style="font-weight:bolder; text-decoration:underline;" t-field="o.phrase56"></span><br/><span style="margin-left:400px;font-style:italic;font-size:20px;" t-field="o.phrase57"></span></h2>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

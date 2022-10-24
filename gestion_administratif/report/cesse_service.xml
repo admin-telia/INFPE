@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.actions.report" id="report_cessation_service">
+		<field name="name">Certificat de cessation de service</field>
+		<field name="model">document.cessationservice</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">gestion_administratif.report_cessation_service</field>
+		<field name="report_file">gestion_administratif.report_cessation_service</field>
+		<field name="binding_model_id" ref="model_document_cessationservice"/>
+		<field name="binding_type">report</field>
+	</record>
+</odoo>

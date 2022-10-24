@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="prime_rendement_tree_view">
+		<field name="name">Prime rendement</field>
+		<field name="model">document.primerendement</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe6"></field>
+				<field name="matricule6"></field>
+				<field name="fonction6"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="prime_rendement_form_view">
+		<field name="name">Prime rendement</field>
+		<field name="model">document.primerendement</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="chef"></field>
+					</group>
+					<group string="Les décrets">
+						<field name="phrase68"></field>
+						<field name="phrase69"></field>
+						<field name="phrase70"></field>
+						<field name="phrase71"></field>
+						<field name="phrase72"></field>
+						<field name="phrase73"></field>
+						<field name="phrase74"></field>
+						<field name="phrase75"></field>
+						<field name="phrase76"></field>
+						<field name="phrase77"></field>
+						<field name="phrase78"></field>
+						<field name="phrase79"></field>
+						<field name="phrase80"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase81"></field>
+						</group>
+						<group>
+							<field name="phrase82"></field>
+						</group>
+						<group>
+							<field name="phrase83"></field>
+							<field name="employe6"></field>
+						</group>
+						<group>
+							<field name="matricule6"></field>
+							<field name="fonction6"></field>
+						</group>
+						<group>
+							<field name="phrase84"></field>
+							<field name="phrase86"></field>
+						</group>
+						<group>
+							<field name="phrase85"></field>
+							<field name="phrase87"></field>
+						</group>
+						<group>
+							<field name="phrase88"></field>
+							<field name="phrase90"></field>
+						</group>
+						<group>
+							<field name="phrase89"></field>
+							<field name="phrase91"></field>
+						</group>
+						<group>
+							<field name="phrase92"></field>
+							<field name="phrase94"></field>
+						</group>
+						<group>
+							<field name="phrase93"></field>
+							<field name="phrase95"></field>
+						</group>
+						<group>
+							<field name="phrase96"></field>
+							<field name="phrase98"></field>
+						</group>
+						<group>
+							<field name="phrase97"></field>
+							<field name="phrase99"></field>
+						</group>
+						<group>
+							<field name="phrase100"></field>
+							<field name="phrase102"></field>
+						</group>
+						<group>
+							<field name="phrase101"></field>
+							<field name="phrase103"></field>
+						</group>
+						<group>
+							<field name="phrase104"></field>
+							<field name="phrase106"></field>
+						</group>
+						<group>
+							<field name="phrase105"></field>
+							<field name="phrase107"></field>
+						</group>
+						<group>
+							<field name="phrase108"></field>
+							<field name="phrase110"></field>
+						</group>
+						<group>
+							<field name="phrase109"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

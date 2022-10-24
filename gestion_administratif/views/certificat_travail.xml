@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="certificat_travail_tree_view">
+		<field name="name">Certificat de travail</field>
+		<field name="model">document.certificattravail</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe4"></field>
+				<field name="matricule4"></field>
+				<field name="fonction4"></field>
+				<field name="date_d4"></field>
+				<field name="date_f4"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="certificat_travail_form_view">
+		<field name="name">Certificat de travail</field>
+		<field name="model">document.certificattravail</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre4"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase47"></field>
+							<field name="employe4"></field>
+						</group>
+						<group>
+							<field name="matricule4"></field>
+							<field name="fonction4"></field>
+						</group>
+						<group>
+							<field name="phrase48"></field>
+							<field name="phrase49"></field>
+						</group>
+						<group>
+							<field name="date_d4"></field>
+							<field name="date_f4"></field>
+						</group>
+						<group>
+							<field name="phrase50"></field>
+							<field name="phrase52"></field>
+						</group>
+						<group>
+							<field name="phrase51"></field>
+							<field name="phrase53"></field>
+						</group>
+						<group>
+							<field name="phrase54"></field>
+							<field name="phrase56"></field>
+						</group>
+						<group>
+							<field name="phrase55"></field>
+							<field name="phrase57"></field>
+						</group>
+						<group>
+							<field name="phrase58"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

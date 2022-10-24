@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="paiement_cessation_tree_view">
+		<field name="name">Certificat de cessation de paiement</field>
+		<field name="model">document.paiement</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="e10"></field>
+				<field name="m10"></field>
+				<field name="f10"></field>
+				<field name="d10"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="paiement_cessation_form_view">
+		<field name="name">Certificat de cessation de paiement</field>
+		<field name="model">document.paiement</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="tit1"></field>
+					</group>
+					<group>
+						<group>
+							<field name="p160"></field>
+						</group>
+						<group>
+							<field name="e10"></field>
+						</group>
+						<group>
+							<field name="m10"></field>
+							<field name="f10"></field>
+						</group>
+						<group>
+							<field name="p161"></field>
+						</group>
+						<group>
+							<field name="p162"></field>
+							<field name="p164"></field>
+						</group>
+						<group>
+							<field name="p163"></field>
+							<field name="p165"></field>
+						</group>
+						<group>
+							<field name="p166"></field>
+							<field name="p168"></field>
+						</group>
+						<group>
+							<field name="p167"></field>
+							<field name="p169"></field>
+						</group>
+						<group>
+							<field name="p170"></field>
+							<field name="p172"></field>
+							<field name="d10"></field>
+						</group>
+						<group>
+							<field name="p171"></field>
+							<field name="p173"></field>
+						</group>
+						<group>
+							<field name="p174"></field>
+							<field name="p176"></field>
+						</group>
+						<group>
+							<field name="p175"></field>
+							<field name="p177"></field>
+						</group>
+						<group>
+							<field name="p178"></field>
+							<field name="p180"></field>
+						</group>
+						<group>
+							<field name="p179"></field>
+							<field name="p181"></field>
+						</group>
+						<group>
+							<field name="p182"></field>
+							<field name="p184"></field>
+						</group>
+						<group>
+							<field name="p183"></field>
+							<field name="p185"></field>
+						</group>
+						<group>
+							<field name="p186"></field>
+							<field name="p188"></field>
+						</group>
+						<group>
+							<field name="p187"></field>
+							<field name="p189"></field>
+						</group>
+						<group>
+							<field name="p190"></field>
+							<field name="p192"></field>
+						</group>
+						<group>
+							<field name="p191"></field>
+							<field name="p193"></field>
+						</group>
+						<group>
+							<field name="p194"></field>
+							<field name="p196"></field>
+						</group>
+						<group>
+							<field name="p195"></field>
+							<field name="p197"></field>
+						</group>
+						<group>
+							<field name="p198"></field>
+							<field name="p200"></field>
+						</group>
+						<group>
+							<field name="p199"></field>
+							<field name="p201"></field>
+						</group>
+						<group>
+							<field name="p202"></field>
+							<field name="p204"></field>
+						</group>
+						<group>
+							<field name="p203"></field>
+							<field name="p205"></field>
+						</group>
+						<group>
+							<field name="p206"></field>
+						</group>
+						<group>
+							<field name="p207"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

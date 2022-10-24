@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="cessation_service_tree_view">
+		<field name="name">Certificat de cessation de service</field>
+		<field name="model">document.cessationservice</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe3"></field>
+				<field name="matricule3"></field>
+				<field name="fonction3"></field>
+				<field name="date_d3"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="cessation_service_form_view">
+		<field name="name">Autorisation de cessation de service</field>
+		<field name="model">document.cessationservice</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre3"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase34"></field>
+							<field name="employe3"></field>
+						</group>
+						<group>
+							<field name="matricule3"></field>
+							<field name="fonction3"></field>
+						</group>
+						<group>
+							<field name="phrase35"></field>
+							<field name="phrase36"></field>
+						</group>
+						<group>
+							<field name="date_d3"></field>
+						</group>
+						<group>
+							<field name="phrase37"></field>
+							<field name="phrase39"></field>
+						</group>
+						<group>
+							<field name="phrase38"></field>
+							<field name="phrase40"></field>
+						</group>
+						<group>
+							<field name="phrase41"></field>
+							<field name="phrase43"></field>
+						</group>
+						<group>
+							<field name="phrase42"></field>
+							<field name="phrase44"></field>
+						</group>
+						<group>
+							<field name="phrase45"></field>
+						</group>
+						<group>
+							<field name="phrase46"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="absence_tree_view">
+		<field name="name">Autorisation Absence</field>
+		<field name="model">document.absence</field>
+		<field name="arch" type="xml">
+			<tree string="Autorisation Absence">
+				<field name="employe1"></field>
+				<field name="matricule1"></field>
+				<field name="fonction1"></field>
+				<field name="date_d1"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="absence_form_view">
+		<field name="name">Autorisation Absence</field>
+		<field name="model">document.absence</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre1"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase8"></field>
+							<field name="phrase10"></field>
+						</group>
+						<group>
+							<field name="phrase9"></field>
+							<field name="phrase11"></field>
+							<field name="employe1"></field>
+						</group>
+						<group>
+							<field name="matricule1"></field>
+							<field name="fonction1"></field>
+						</group>
+						<group>
+							<field name="phrase12"></field>
+						</group>
+						<group>
+							<field name="phrase13"></field>
+						</group>
+						<group>
+							<field name="date_d1"></field>
+						</group>
+						<group>
+							<field name="phrase14"></field>
+							<field name="phrase16"></field>
+						</group>
+						<group>
+							<field name="phrase15"></field>
+							<field name="phrase17"></field>
+						</group>
+						<group>
+							<field name="phrase18"></field>
+						</group>
+						<group>
+							<field name="phrase19"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

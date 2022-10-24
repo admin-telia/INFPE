@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vue report cotisation agent -->
+    <record model="ir.ui.view" id="view_id_hr_etat_cot_form">
+        <field name="name">view.hr_etat_cot.form</field>
+        <field name="model">hr_etat_cot</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Report/Banque">
+                <header>
+                        <button string="Afficher" name="avoir" type="object"  class="oe_highlight" groups='Gestion_Paie.Gestion_Paie_consulter_donnees'/>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1><field name="name"/></h1>
+                </div>
+                <group>
+                    <group>
+                         <field name="x_type_employe_id" required="True"/>
+                        <label for="x_date_debut" string="Période"/>
+                        <div>
+                            <field name="x_date_debut" class="oe_inline"/> - <field name="x_date_fin" class="oe_inline"/>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="financiers_id"/>
+                        <field name="drhs_id"/>
+                    </group>
+                </group>
+                <group><field name="x_mnts" invisible = "1"/></group>
+                <group><field name="date_op" invisible = "1" force_save = '1'/></group>
+                <group>
+                 <field name = 'x_line_ids'>
+                     <tree>
+                         <field name="numero"/>
+                         <field name="x_matricule"/>
+                         <field name="name"/>
+                         <field name="x_num_cnss"/>
+                         <field name="x_mnt"/>
+                     </tree>
+                 </field>
+            </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_id_hr_etat_cot_tree">
+        <field name="name">view.hr_etat_cot.tree</field>
+        <field name="model">hr_etat_cot</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="x_type_employe_id"/>
+                <field name="name"/>
+                <field name="x_date_debut"/>
+                <field name="x_date_fin"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_hr_etat_cot">
+		<field name="name">Cotisation Sociale Part Agents</field>
+		<field name="res_model">hr_etat_cot</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vue report cotisation employeur -->
+    <record model="ir.ui.view" id="view_id_hr_etat_cot_emp_form">
+        <field name="name">view.hr_etat_cot_emp.form</field>
+        <field name="model">hr_etat_cot_emp</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                        <button string="Afficher" name="avoir" type="object"  class="oe_highlight" groups='Gestion_Paie.Gestion_Paie_consulter_donnees'/>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1><field name="name"/></h1>
+                </div>
+                <group>
+                    <group>
+                        <field name="x_type_employe_id" required="True"/>
+                        <label for="x_date_debut" string="Période"/>
+                        <div>
+                            <field name="x_date_debut" class="oe_inline"/> - <field name="x_date_fin" class="oe_inline"/>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="financiers_id"/>
+                        <field name="drhs_id"/>
+                    </group>
+                </group>
+                <group><field name="x_mnts" invisible = "1"/></group>
+                <group><field name="date_op" invisible = "1" force_save = '1'/></group>
+                <group>
+                 <field name = 'x_line_ids'>
+                     <tree>
+                         <field name="numero"/>
+                         <field name="x_matricule"/>
+                         <field name="name"/>
+                         <field name="x_num_cnss"/>
+                         <field name="x_mnt"/>
+                     </tree>
+                 </field>
+            </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_idhr_etat_cot_emp_tree">
+        <field name="name">view.hr_etat_cot_emp.tree</field>
+        <field name="model">hr_etat_cot_emp</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="x_type_employe_id"/>
+                <field name="name"/>
+                <field name="x_date_debut"/>
+                <field name="x_date_fin"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_hr_etat_cot_emp">
+		<field name="name">Cotisation Sociale Part Employeur</field>
+		<field name="res_model">hr_etat_cot_emp</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vue report cotisation agent employeur -->
+    <record model="ir.ui.view" id="view_id_hr_etat_cot_ag_emp_form">
+        <field name="name">view.hr_etat_cot_ag_emp.form</field>
+        <field name="model">hr_etat_cot_ag_emp</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Report/Banque">
+                <header>
+                        <button string="Afficher" name="avoir" type="object"  class="oe_highlight" groups='Gestion_Paie.Gestion_Paie_consulter_donnees'/>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1><field name="name"/></h1>
+                </div>
+                <group>
+                    <group>
+                        <field name="x_type_employe_id" required="True"/>
+                        <label for="x_date_debut" string="Période"/>
+                        <div>
+                            <field name="x_date_debut" class="oe_inline"/> - <field name="x_date_fin" class="oe_inline"/>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="financiers_id"/>
+                        <field name="drhs_id"/>
+                    </group>
+                </group>
+                <group><field name="x_mnts" invisible = "1"/></group>
+                <group><field name="date_op" invisible = "1" force_save = '1'/></group>
+                <group>
+                 <field name = 'x_line_ids'>
+                     <tree>
+                         <field name="numero"/>
+                         <field name="x_matricule"/>
+                         <field name="name"/>
+                         <field name="x_num_cnss"/>
+                         <field name="x_mnt"/>
+                         <field name="x_mnt_emp"/>
+                     </tree>
+                 </field>
+            </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_hr_etat_cot_ag_emp_tree">
+        <field name="name">view.hr_etat_cot_ag_emp.tree</field>
+        <field name="model">hr_etat_cot_ag_emp</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="x_type_employe_id"/>
+                <field name="name"/>
+                <field name="x_date_debut"/>
+                <field name="x_date_fin"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_hr_etat_cot_ag_emp">
+		<field name="name">Cotisation Sociale Agent/Employeur</field>
+		<field name="res_model">hr_etat_cot_ag_emp</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Vue report preompte -->
+    <record model="ir.ui.view" id="view_id_hr_etat_precompte_form">
+        <field name="name">view.hr_etat_precompte.form</field>
+        <field name="model">hr_etat_precompte</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Report/Banque">
+                <header>
+                        <button string="Afficher" name="avoir" type="object"  class="oe_highlight" groups='Gestion_Paie.Gestion_Paie_consulter_donnees'/>
+                </header>
+                <sheet>
+                <div class="oe_title">
+                    <h1><field name="name"/></h1>
+                </div>
+                <group>
+                    <group>
+                         <field name="x_elt_sal_id" required="True"/>
+                        <label for="x_date_debut" string="Période"/>
+                        <div>
+                            <field name="x_date_debut" class="oe_inline"/> - <field name="x_date_fin" class="oe_inline"/>
+                        </div>
+                    </group>
+                    <group>
+                        <field name="financiers_id"/>
+                        <field name="drhs_id"/>
+                    </group>
+                </group>
+                <group><field name="x_mnts" invisible = "1"/></group>
+                <group><field name="date_op" invisible = "1" force_save = '1'/></group>
+                <group>
+                 <field name = 'x_line_ids'>
+                     <tree>
+                         <field name="numero"/>
+                         <field name="x_matricule"/>
+                         <field name="name"/>
+                         <field name="x_reference"/>
+                         <field name="x_mnt"/>
+                         <field name="x_mnt_ret_mens"/>
+                         <field name="x_mnt_rem"/>
+                         <field name="x_mnt_rest"/>
+                     </tree>
+                 </field>
+            </group>
+            </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_id_hr_etat_precompte_tree">
+        <field name="name">view.hr_etat_precompte.tree</field>
+        <field name="model">hr_etat_precompte</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="code"/>
+                <field name="x_type_employe_id"/>
+                <field name="name"/>
+                <field name="x_date_debut"/>
+                <field name="x_date_fin"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_hr_etat_precompte">
+		<field name="name">Etat Précompte</field>
+		<field name="res_model">hr_etat_precompte</field>
+		<field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- <menuitem id="menu_etat_synth_precompte" name ="Etat Précompte"
+              sequence="600" action="act_hr_etat_precompte" parent="main_menu_etat_etats"/>
+    <menuitem id="menu_cot_cot_part_agent" name ="Etat Cotisation Sociale Part Agent"
+              sequence="10" action="act_hr_etat_cot" parent="menu_cot_cot"/>
+    <menuitem id="menu_cot_cot_part_emp" name ="Etat Cotisation Sociale Part Employeur"
+              sequence="20" action="act_hr_etat_cot_emp" parent="menu_cot_cot"/>
+    <menuitem id="menu_cot_cot_part_ag_emp" name ="Etat Recapitulatif/Part Sociale"
+              sequence="30" action="act_hr_etat_cot_ag_emp" parent="menu_cot_cot"/> -->
+</odoo>

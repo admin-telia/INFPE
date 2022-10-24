@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_service1">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;margin-top:100px;font-weight:bolder;font-style:normal;text-decoration:underline;text-align:center;font-family:Algerian;"><span t-field="o.titre7"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span t-field="o.phrase111"></span> <span style="font-weight:bolder;" t-field="o.employe7"></span>, matricule <span style="font-weight:bolder;" t-field="o.matricule7"></span>, <span style="font-weight:bolder;" t-field="o.fonction7"></span>, <span t-field="o.phrase112"></span> <span style="font-weight:bolder;" t-field="o.date_d7"></span>.<br/><br/> 
+								<span t-field="o.phrase113"></span>
+							</p>
+							<div style="margin-top:50px;font-size:30px;font-weight:bolder;margin-left:520px;">
+								<span t-field="o.phrase114"></span>
+							</div>
+							<p style="margin-top:10px; text-align:justify;">
+								<span style=" font-size:30px;font-weight:bolder;text-decoration:underline;" t-field="o.phrase115"></span>
+								<br/>
+								<div style="display:flex;">
+									<div style="text-align:left;font-style:italic;">
+										<span t-field="o.phrase116"></span><br/>
+										<span t-field="o.phrase117"></span>
+									</div>
+								</div>
+							</p>
+							<div style="margin-top:50px;font-size:30px;font-weight:bolder;margin-left:520px;text-align:right;">
+								<span t-field="o.phrase118"></span>
+							</div>
+							<h2 style="text-align:right;margin-top:80px;"><span style="font-weight:bolder; text-decoration:underline;" t-field="o.phrase119"></span><br/><span style="margin-left:400px;font-style:italic;font-size:18px;" t-field="o.phrase120"></span></h2>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.actions.report" id="report_conge_administratif">
+		<field name="name">Congés administratifs</field>
+		<field name="model">document.congeadministratif</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">gestion_administratif.report_conge_administratif</field>
+		<field name="report_file">gestion_administratif.report_conge_administratif</field>
+		<field name="binding_model_id" ref="model_document_congeadministratif"/>
+		<field name="binding_type">report</field>
+	</record>
+</odoo>

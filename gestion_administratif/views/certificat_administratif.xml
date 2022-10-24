@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="certificat_administratif_tree_view">
+		<field name="name">Certificat administratif</field>
+		<field name="model">document.certificatadministratif</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe8"></field>
+				<field name="matricule8"></field>
+				<field name="fonction8"></field>
+				<field name="date_d8"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="certificat_administratif_form_view">
+		<field name="name">Certificat administratif</field>
+		<field name="model">document.certificatadministratif</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre8"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase122"></field>
+						</group>
+						<group>
+							<field name="employe8"></field>
+						</group>
+						<group>
+							<field name="matricule8"></field>
+							<field name="fonction8"></field>
+						</group>
+						<group>
+							<field name="phrase123"></field>
+						</group>
+						<group>
+							<field name="date_d8"></field>
+						</group>
+						<group>
+							<field name="phrase124"></field>
+						</group>
+						<group>
+							<field name="phrase125"></field>
+							<field name="phrase127"></field>
+						</group>
+						<group>
+							<field name="phrase126"></field>
+							<field name="phrase128"></field>
+						</group>
+						<group>
+							<field name="phrase129"></field>
+							<field name="phrase131"></field>
+						</group>
+						<group>
+							<field name="phrase130"></field>
+							<field name="phrase132"></field>
+						</group>
+						<group>
+							<field name="phrase133"></field>
+							<field name="phrase135"></field>
+						</group>
+						<group>
+							<field name="phrase134"></field>
+							<field name="phrase136"></field>
+						</group>
+						<group>
+							<field name="phrase137"></field>
+							<field name="phrase139"></field>
+						</group>
+						<group>
+							<field name="phrase138"></field>
+							<field name="phrase140"></field>
+						</group>
+						<group>
+							<field name="phrase141"></field>
+							<field name="phrase143"></field>
+						</group>
+						<group>
+							<field name="phrase142"></field>
+							<field name="phrase144"></field>
+						</group>
+						<group>
+							<field name="phrase145"></field>
+							<field name="phrase147"></field>
+						</group>
+						<group>
+							<field name="phrase146"></field>
+							<field name="phrase148"></field>
+						</group>
+						<group>
+							<field name="pi1"></field>
+							<field name="phrase149"></field>
+						</group>
+						<group>
+							<field name="phrase150"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

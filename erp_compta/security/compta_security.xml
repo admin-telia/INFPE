@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+ 
+	 <record id="erp_compta_category" model="ir.module.category">
+        <field name="name">COMPTABILITE</field>
+    </record>
+	
+	<!--Coonsultation-->
+	<record id="erp_compta_acc" model="res.groups">
+        <field name="name">CS</field>
+        <field name="category_id" ref="erp_compta_category"/>    
+    </record>
+      
+	<record id="erp_compta_agent" model="res.groups">
+        <field name="name">Accès Comptabilité</field>
+		<field name="implied_ids" eval="[(4,ref('erp_compta.erp_compta_acc'))]"/>
+        <field name="category_id" ref="erp_compta_category"/> 		
+    </record> 
+	
+	<!--Agent Compta-->
+	<record id="erp_compta_aca" model="res.groups">
+        <field name="name">DFC-DAF/A</field>
+		<field name="implied_ids" eval="[(4,ref('erp_compta.erp_compta_agent'))]"/>
+        <field name="category_id" ref="erp_compta_category"/>    
+    </record>
+	
+	<!--Responsable-->
+	<record id="erp_compta_acs" model="res.groups">
+        <field name="name">DFC-DAF/R</field>
+		<field name="implied_ids" eval="[(4,ref('erp_compta.erp_compta_aca'))]"/>
+        <field name="category_id" ref="erp_compta_category"/>    
+    </record>
+    
+	<!--Super Responsable-->
+    <record id="erp_compta_acr" model="res.groups">
+        <field name="name">DFC-DAF/S</field>
+		<field name="implied_ids" eval="[(4,ref('erp_compta.erp_compta_acs'))]"/>
+        <field name="category_id" ref="erp_compta_category"/>    
+    </record>
+    
+
+    
+    
+	<record id="erp_compta_admin" model="res.groups">
+        <field name="name">ADMIN DONNEES</field>
+        <field name="category_id" ref="erp_compta_category"/>    
+    </record>
+	
+	 
+
+</odoo>

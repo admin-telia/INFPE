@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_pem_css">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;font-weight:bolder;font-style:normal;text-decoration:underline;text-align:center;"><span t-field="o.tit1"></span></h1>
+							<p style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span t-field="o.p160"></span> <span style="font-weight:bolder;" t-field="o.e10"></span>, matricule <span style="font-weight:bolder;" t-field="o.m10"></span>, <span style="font-weight:bolder;" t-field="o.f10"></span>, <span t-field="o.p161"></span>
+								<span style="font-weight:bolder;" t-field="o.p162"></span>
+								<span t-field="o.p163"></span>
+								<span style="font-weight:bolder;" t-field="o.p164"></span>
+								<span style="font-weight:bolder;" t-field="o.p165"></span>
+								<span t-field="o.p166"></span>
+								<span t-field="o.p167"></span>
+								<span style="font-weight:bolder;"  t-field="o.p168"></span>
+								<span t-field="o.p169"></span>
+								<span style="font-weight:bolder;" t-field="o.p170"></span>
+								<span t-field="o.p171"></span> <span style="font-weight:bolder;" t-field="o.d10"></span> <span t-field="o.p172"></span>
+								<span t-field="o.p173"></span>
+								<br/> 
+								<span style="font-weight:bolder;" t-field="o.p174"></span>
+								<span t-field="o.p175"></span><br/>
+								<span style="font-weight:bolder;" t-field="o.p176"></span>
+								<span t-field="o.p177"></span><br/>
+								<span t-field="o.p178"></span>
+							</p>
+							<div style="margin-left:50px;font-size:30px;">
+								<span t-field="o.p179"></span>
+								<span style="margin-left:350px;" t-field="o.p180"></span><br/>
+								<span t-field="o.p181"></span>
+								<span style="margin-left:305px;" t-field="o.p182"></span><br/>
+								<span t-field="o.p183"></span>
+								<span style="margin-left:275px;" t-field="o.p184"></span><br/>
+								<span t-field="o.p185"></span>
+								<span style="margin-left:285px;" t-field="o.p186"></span><br/>
+								<span t-field="o.p187"></span>
+								<span style="margin-left:275px;" t-field="o.p188"></span><br/>	
+								<span t-field="o.p189"></span>
+								<span style="margin-left:285px;" t-field="o.p190"></span><br/>
+								<span t-field="o.p191"></span>
+								<span style="margin-left:180px;" t-field="o.p192"></span>
+							</div>
+							<p style="font-size:30px;margin-top:20px;">
+								<span t-field="o.p193"></span>
+							</p>
+							<div style="margin-left:50px;font-size:30px;">
+								<span t-field="o.p194"></span>
+								<span style="margin-left:350px;" t-field="o.p195"></span><br/>
+								<span t-field="o.p196"></span>
+								<span style="margin-left:415px;" t-field="o.p197"></span>
+							</div>
+							<p style="font-size:30px;">
+								<span t-field="o.p198"></span><br/>
+								<span style="font-weight:bolder;text-decoration:underline;" t-field="o.p199"></span>
+								<span style="font-weight:bolder;" t-field="o.p200"></span>
+								<span t-field="o.p201"></span><br/>
+								<span style="font-weight:bolder;" t-field="o.p202"></span>
+								<span t-field="o.p203"></span>
+							</p>
+							<div style="margin-top:20px;font-size:30px;font-weight:bolder;margin-left:520px;">
+								<span t-field="o.p204"></span><br/><br/>
+								<span t-field="o.p205"></span>
+							</div>
+							<h2 style="text-align:right;margin-top:50px;"><span style="font-weight:bolder; text-decoration:underline;" t-field="o.p206"></span><br/><span style="margin-left:400px;font-style:italic;font-size:18px;" t-field="o.p207"></span></h2>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

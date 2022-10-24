@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="suspension_contrat_tree_view">
+		<field name="name">Décision de suspension de contrat</field>
+		<field name="model">document.suspensioncontrat</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe11"></field>
+				<field name="matricule11"></field>
+				<field name="fonction11"></field>
+				<field name="date_d11"></field>
+				<field name="date_f11"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="suspension_contrat_form_view">
+		<field name="name">Décision de suspension de contrat</field>
+		<field name="model">document.suspensioncontrat</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre11"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase210"></field>
+						</group>
+						<group>
+							<field name="phrase211"></field>
+						</group>
+						<group>
+							<field name="employe11"></field>
+						</group>
+						<group>
+							<field name="matricule11"></field>
+							<field name="fonction11"></field>
+						</group>
+						<group>
+							<field name="phrase212"></field>
+						</group>
+						<group>
+							<field name="date_d11"></field>
+							<field name="date_f11"></field>
+						</group>
+						<group>
+							<field name="phrase213"></field>
+						</group>
+						<group>
+							<field name="phrase214"></field>
+						</group>
+						<group>
+							<field name="phrase215"></field>
+						</group>
+						<group>
+							<field name="phrase216"></field>
+							<field name="phrase217"></field>
+						</group>
+						<group>
+							<field name="phrase218"></field>
+						</group>
+						<group>
+							<field name="phrase219"></field>
+						</group>
+						<group>
+							<field name="phrase220"></field>
+						</group>
+						<group>
+							<field name="phrase221"></field>
+							<field name="phrase222"></field>
+						</group>
+						<group>
+							<field name="phrase223"></field>
+							<field name="phrase225"></field>
+						</group>
+						<group>
+							<field name="phrase224"></field>
+							<field name="phrase226"></field>
+						</group>
+						<group>
+							<field name="phrase227"></field>
+							<field name="phrase229"></field>
+						</group>
+						<group>
+							<field name="phrase228"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

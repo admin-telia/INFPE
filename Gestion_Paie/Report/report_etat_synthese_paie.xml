@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_cot_part_agent">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<h4 style="text-align:center">ETAT COTISATION SOCIALE PART AGENT DU MOIS DE : <span style="color:red;font-weight:bold" t-field="o.periode"/></h4>
+					<table class = 'table table-sm'>
+						<thead style="border:2px solid #000000;">
+							  <tr style="border:2px solid;">
+								  <th style="border:2px solid;"><strong><i>Libellé</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Type employé</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Du</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Au</i></strong></th>
+							</tr>
+						</thead>
+						<tbody>
+								<td style="border:2px solid;"><span t-field="o.name"/></td>
+								<td style="border:2px solid;"><span t-esc="o.x_type_employe_id.name"/></td>
+								<td style="border:2px solid;"><span t-field="o.x_date_debut"/></td>
+								<td style="border:2px solid;"><span t-field="o.x_date_fin"/></td>
+						</tbody>
+					</table>
+					<table class = 'table table-sm'>
+						<thead style="border:2px solid #000000;">
+							  <tr style="border:2px solid;" >
+								  <th style="border:2px solid;"><strong><i>N°</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Matricule</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Employé</i></strong></th>
+								  <t t-if="o.x_type_employe_id.code == 'CTRCT' ">
+								  	<th style="border:2px solid;"><strong><i>N° CNSS</i></strong></th>
+								  </t>
+								  <th style="border:2px solid;"><strong><i>Montant</i></strong></th>
+							  </tr>
+						</thead>
+						<tbody>
+							 <tr t-foreach="o.x_line_ids" t-as="line">
+									<td style="border:2px solid;" ><span t-field="line.numero"/></td>
+									<td style="border:2px solid;" ><span t-field="line.x_matricule"/></td>
+									<td style="border:2px solid;"><span t-field="line.name"/></td>
+									<t t-if="o.x_type_employe_id.code == 'CTRCT' ">
+										<td style="border:2px solid;"><span t-field="line.x_num_cnss"/></td>
+									</t>
+									<td style="border:2px solid; text-align:right">
+										<span t-esc="'{:,}'.format(int(line.x_mnt)).replace(',', ' ')"/>
+									</td>
+							  </tr>
+						</tbody>
+					</table>
+					<p style="text-align:right; widht:100%"> Total : <span t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/></p>
+					<p style="text-align:right; widht:100%">
+						Arrêté à la somme de :
+						  <span t-field="o.x_mnt_en_lettre"/> (<span t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/>)  francs CFA.
+					</p>
+					<tfoot>
+							<div class="row mt32 mb32">
+								<div class="col-2">
+									<strong>DRH</strong>
+									<br/>
+									<br/>
+									<br/>
+									<br/>
+									<p t-field="o.drhs_id.name"/>
+								</div>
+								<div class="col-4">
+									<strong></strong>
+									<p/>
+								</div>
+								<div class="col-3">
+									<strong></strong>
+									<p/>
+								</div>
+								<div class="col-3">
+									<strong>Financier</strong>
+									<br/>
+									<br/>
+									<br/>
+									<br/>
+									<p t-esc="o.financiers_id.name"/>
+								</div>
+							</div>
+					</tfoot>
+				</t>
+			 </t>
+		</t>
+	</template>
+	<report
+		id="report_cot_part_agent"
+		string="Imprimer"
+		model="hr_etat_cot"
+		report_type="qweb-html"
+		file="Gestion_Paie.report_cot_part_agent"
+		name="Gestion_Paie.report_cot_part_agent"
+		groups = "base.group_user"
+		menu = "True"/>
+
+	<template id="report_cot_part_empl">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<h4 style="text-align:center">ETAT COTISATION SOCIALE PART PATRONALE DU MOIS DE : <span style="color:red;font-weight:bold" t-field="o.periode"/></h4>
+					<table class = 'table table-sm'>
+						<thead style="border:2px solid #000000;">
+							  <tr style="border:2px solid;">
+								  <th style="border:2px solid;"><strong><i>Libellé</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Type employé</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Du</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Au</i></strong></th>
+							</tr>
+						</thead>
+						<tbody>
+								<td style="border:2px solid;"><span t-field="o.name"/></td>
+								<td style="border:2px solid;"><span t-esc="o.x_type_employe_id.name"/></td>
+								<td style="border:2px solid;"><span t-field="o.x_date_debut"/></td>
+								<td style="border:2px solid;"><span t-field="o.x_date_fin"/></td>
+						</tbody>
+					</table>
+					<table class = 'table table-sm'>
+						<thead style="border:2px solid #000000;">
+							  <tr style="border:2px solid;" >
+								  <th style="border:2px solid;"><strong><i>N°</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Matricule</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Employé</i></strong></th>
+								  <t t-if="o.x_type_employe_id.code == 'CTRCT' ">
+								  	<th style="border:2px solid;"><strong><i>N° CNSS</i></strong></th>
+								  </t>
+								  <th style="border:2px solid;"><strong><i>Montant</i></strong></th>
+							  </tr>
+						</thead>
+						<tbody>
+							 <tr t-foreach="o.x_line_ids" t-as="line">
+									<td style="border:2px solid;" ><span t-field="line.numero"/></td>
+									<td style="border:2px solid;" ><span t-field="line.x_matricule"/></td>
+									<td style="border:2px solid;"><span t-field="line.name"/></td>
+									<t t-if="o.x_type_employe_id.code == 'CTRCT' ">
+										<td style="border:2px solid;"><span t-field="line.x_num_cnss"/></td>
+									</t>
+									<td style="border:2px solid; text-align:right">
+										<span t-esc="'{:,}'.format(int(line.x_mnt)).replace(',', ' ')"/>
+									</td>
+							  </tr>
+						</tbody>
+					</table>
+					<p style="text-align:right; widht:100%"> Total : <span t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/></p>
+					<p style="text-align:right; widht:100%">
+						Arrêté à la somme de :
+						  <span t-field="o.x_mnt_en_lettre"/> (<span t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/>)  francs CFA.
+					</p>
+					<tfoot>
+							<div class="row mt32 mb32">
+								<div class="col-2">
+									<strong>DRH</strong>
+									<br/>
+									<br/>
+									<br/>
+									<br/>
+									<p t-field="o.drhs_id.name"/>
+								</div>
+								<div class="col-4">
+									<strong></strong>
+									<p/>
+								</div>
+								<div class="col-3">
+									<strong></strong>
+									<p/>
+								</div>
+								<div class="col-3">
+									<strong>Financier</strong>
+									<br/>
+									<br/>
+									<br/>
+									<br/>
+									<p t-esc="o.financiers_id.name"/>
+								</div>
+							</div>
+					</tfoot>
+				</t>
+			 </t>
+		</t>
+	</template>
+	<report
+		id="report_cot_part_emp"
+		string="Imprimer"
+		model="hr_etat_cot_emp"
+		report_type="qweb-html"
+		file="Gestion_Paie.report_cot_part_empl"
+		name="Gestion_Paie.report_cot_part_empl"
+		groups = "base.group_user"
+		menu = "True"/>
+
+	<template id="report_cot_part_agent_emp">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="web.external_layout">
+					<h4 style="text-align:center">ETAT COTISATION SOCIALE PART AGENT DU MOIS DE : <span style="color:red;font-weight:bold" t-field="o.periode"/></h4>
+					<table class = 'table table-sm'>
+						<thead style="border:2px solid #000000;">
+							  <tr style="border:2px solid;">
+								  <th style="border:2px solid;"><strong><i>Libellé</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Type employé</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Du</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Au</i></strong></th>
+							</tr>
+						</thead>
+						<tbody>
+								<td style="border:2px solid;"><span t-field="o.name"/></td>
+								<td style="border:2px solid;"><span t-esc="o.x_type_employe_id.name"/></td>
+								<td style="border:2px solid;"><span t-field="o.x_date_debut"/></td>
+								<td style="border:2px solid;"><span t-field="o.x_date_fin"/></td>
+						</tbody>
+					</table>
+					<table class = 'table table-sm'>
+						<thead style="border:2px solid #000000;">
+							  <tr style="border:2px solid;" >
+								  <th style="border:2px solid;"><strong><i>N°</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Matricule</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Employé</i></strong></th>
+								  <t t-if="o.x_type_employe_id.code == 'CTRCT' ">
+								  	<th style="border:2px solid;"><strong><i>N° CNSS</i></strong></th>
+								  </t>
+								  <th style="border:2px solid;"><strong><i>Part Agent</i></strong></th>
+								  <th style="border:2px solid;"><strong><i>Part Patronale</i></strong></th>
+							  </tr>
+						</thead>
+						<tbody>
+							 <tr t-foreach="o.x_line_ids" t-as="line">
+									<td style="border:2px solid;" ><span t-field="line.numero"/></td>
+									<td style="border:2px solid;" ><span t-field="line.x_matricule"/></td>
+									<td style="border:2px solid;"><span t-field="line.name"/></td>
+									<t t-if="o.x_type_employe_id.code == 'CTRCT' ">
+										<td style="border:2px solid;"><span t-field="line.x_num_cnss"/></td>
+									</t>
+									<td style="border:2px solid; text-align:right">
+										<span t-esc="'{:,}'.format(int(line.x_mnt)).replace(',', ' ')"/>
+									</td>
+								 	<td style="border:2px solid; text-align:right">
+										<span t-esc="'{:,}'.format(int(line.x_mnt_emp)).replace(',', ' ')"/>
+									</td>
+							  </tr>
+						</tbody>
+					</table>
+					<p style="text-align:right; widht:100%"> Total : <span t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/></p>
+					<p style="text-align:right; widht:100%">
+						Arrêté à la somme de :
+						  <span t-field="o.x_mnt_en_lettre"/> (<span t-esc="'{:,}'.format(int(o.x_mnts)).replace(',', ' ')"/>)  francs CFA.
+					</p>
+					<tfoot>
+							<div class="row mt32 mb32">
+								<div class="col-2">
+									<strong>DRH</strong>
+									<br/>
+									<br/>
+									<br/>
+									<br/>
+									<p t-field="o.drhs_id.name"/>
+								</div>
+								<div class="col-4">
+									<strong></strong>
+									<p/>
+								</div>
+								<div class="col-3">
+									<strong></strong>
+									<p/>
+								</div>
+								<div class="col-3">
+									<strong>Financier</strong>
+									<br/>
+									<br/>
+									<br/>
+									<br/>
+									<p t-esc="o.financiers_id.name"/>
+								</div>
+							</div>
+					</tfoot>
+				</t>
+			 </t>
+		</t>
+	</template>
+	<report
+		id="report_cot_part_agent_emp"
+		string="Imprimer"
+		model="hr_etat_cot_ag_emp"
+		report_type="qweb-html"
+		file="Gestion_Paie.report_cot_part_agent_emp"
+		name="Gestion_Paie.report_cot_part_agent_emp"
+		groups = "base.group_user"
+		menu = "True"/>
+</odoo>

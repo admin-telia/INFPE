@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="prise_service_tree_view">
+		<field name="name">Certificat de prise de service</field>
+		<field name="model">document.priseservice</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="employe7"></field>
+				<field name="matricule7"></field>
+				<field name="fonction7"></field>
+				<field name="date_d7"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="prise_service_form_view">
+		<field name="name">Certificat de prise de service</field>
+		<field name="model">document.priseservice</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre7"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase111"></field>
+						</group>
+						<group>
+							<field name="employe7"></field>
+						</group>
+						<group>
+							<field name="matricule7"></field>
+							<field name="fonction7"></field>
+						</group>
+						<group>
+							<field name="phrase112"></field>
+						</group>
+						<group>
+							<field name="date_d7"></field>
+						</group>
+						<group>
+							<field name="phrase113"></field>
+						</group>
+						<group>
+							<field name="phrase114"></field>
+							<field name="phrase116"></field>
+						</group>
+						<group>
+							<field name="phrase115"></field>
+							<field name="phrase117"></field>
+						</group>
+						<group>
+							<field name="phrase118"></field>
+							<field name="phrase120"></field>
+						</group>
+						<group>
+							<field name="phrase119"></field>
+							<field name="phrase121"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>	
+</odoo>

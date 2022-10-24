@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="view_id_document_tree">
+		<field name="name">document.administratif.tree</field>
+		<field name="model">document.administratifs</field>
+		<field name="arch" type="xml">
+			<tree string="Document Administratif">
+				<field name="employe"></field>
+				<field name="matricule"></field>
+				<field name="fonction"></field>
+				<field name="date_d"></field>
+				<field name="date_f"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="document_form_view">
+		<field name="name">Documents administratifs</field>
+		<field name="model">document.administratifs</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="titre"></field>
+					</group>
+					<group>
+						<group>
+							<field name="phrase1"></field>
+						</group>
+						<group>
+							<field name="employe"></field>
+						</group>
+						<group>
+							<field name="matricule"></field>
+							<field name="fonction"></field>
+						</group>
+						<group>
+							<field name="phrase2"></field>
+						</group>
+						<group>
+							<field name="date_d"></field>
+						</group>
+						<group>
+							<field name="date_f"></field>
+						</group>
+						<group>
+							<field name="phrase3"></field>
+							<field name="phrase5"></field>
+						</group>
+						<group>
+							<field name="phrase4"></field>
+							<field name="phrase6"></field>
+						</group>
+						<group>
+							<field name="phrase7"></field>
+						</group>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

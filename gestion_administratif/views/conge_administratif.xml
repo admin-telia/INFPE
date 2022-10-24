@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="conge_administratif_tree_view">
+		<field name="name">Congés administratifs</field>
+		<field name="model">document.congeadministratif</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="t1"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="conge_administratif_form_view">
+		<field name="name">Congés administratifs</field>
+		<field name="model">document.congeadministratif</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="t1"></field>
+					</group>
+					<group>
+						<field name="ph1"></field>
+					</group>
+					<group>
+						<field name="ph2"></field>
+					</group>
+					<group>
+						<field name="ph3"></field>
+					</group>
+					<group>
+						<field name="ph4"></field>
+					</group>
+					<group>
+						<field name="ph5"></field>
+					</group>
+					<group>
+						<field name="ph6"></field>
+					</group>
+					<group>
+						<field name="ph7"></field>
+					</group>
+					<group>
+						<field name="ph8"></field>
+					</group>
+					<group>
+						<field name="ph9"></field>
+					</group>
+					<group>
+						<field name="ph10"></field>
+					</group>
+					<group>
+						<field name="ph11"></field>
+					</group>
+					<group>
+						<field name="ph12"></field>
+					</group>
+					<group>
+						<field name="ph13"></field>
+					</group>
+					<group>
+						<field name="ph14"></field>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>

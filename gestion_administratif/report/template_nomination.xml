@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_nomme1">
+		<t t-call="web.basic_layout">
+			<t t-foreach="docs" t-as="o">
+				<div class="page" style="margin-top:0px;padding-top:0px;">
+					<div class="oe_structure" style="margin-top:0px;padding-top:0px;text-align:justify;font-family:Arial Narrow;">
+							<h1 style="font-size:35px;color:black;font-weight:bolder;font-style:normal;text-align:center;"><span t-field="o.t4"></span></h1>
+							<div style="font-size:30px;margin-top:20px;line-space:50px;margin-right:20px;">
+								<span t-field="o.pr1"></span><br/>
+								<span t-field="o.pr2"></span><br/>
+								<span t-field="o.pr3"></span><br/>
+								<span t-field="o.pr4"></span><br/>
+								<span t-field="o.pr5"></span><br/>
+								<span t-field="o.pr6"></span><br/>
+								<span t-field="o.pr7"></span><br/>
+								<span t-field="o.pr8"></span><br/>
+								<span t-field="o.pr9"></span><br/>
+								<span t-field="o.pr10"></span><br/>
+								<span t-field="o.pr11"></span><br/>
+								<span t-field="o.pr12"></span><br/>
+								<span t-field="o.pr13"></span><br/>
+								<span t-field="o.pr14"></span><br/>
+								<span t-field="o.pr15"></span><br/>
+								<span t-field="o.pr16"></span><br/>
+								<h1 style="text-align:center;font-size:30px;">
+									<span t-field="o.pr17"></span>
+								</h1>
+							</div>
+							<p style="font-size:30px;">
+								<span style="font-weight:bolder;text-decoration:underline;" t-field="o.pr18"></span>
+								<span t-field="o.pr19"></span>
+							</p>
+							<t t-if="o.agent_id">
+								<table class="table table-sm o_main_table" name="etat_stagiaire" style="font-size:20px;">
+									<thead style="background-color:gray;">
+										<tr>
+											<th name="th_employe_id" class="text-left" style="border:2px solid black !important;">
+												<span>Nom et prénom</span>
+											</th>
+											<th name="th_matricule" class="text-left" style="border:2px solid black !important;">
+												<span>N° matricule</span>
+											</th>
+											<th name="th_emplois" class="text-left" style="border:2px solid black !important;">
+												<span>Emploi</span>
+											</th>
+											<th name="th_poste_id" class="text-left" style="border:2px solid black !important;">
+												<span>Poste de nomination</span>
+											</th>
+										</tr>
+									</thead>
+									<t t-foreach="o.agent_id" t-as="line">
+										<tr>
+											<td style="border:2px solid black !important;">
+												<span t-field="line.employe_id"></span>
+											</td>
+											<td style="border:2px solid black !important;">
+												<span t-field="line.matricule"></span>
+											</td>
+											<td style="border:2px solid black !important;">
+												<span t-field="line.emplois"></span>
+											</td>
+											<td style="border:2px solid black !important;">
+												<span t-field="line.poste_id"></span>
+											</td>
+										</tr>
+									</t>
+								</table>
+							</t>
+							<p style="font-size:30px;margin-top:20px;">
+								<span style="text-decoration:underline;font-weight:bolder;" t-field="o.pr20"></span> 
+								<span t-field="o.pr21"></span>
+							</p>
+							<p style="font-size:30px;margin-top:20px;">
+								<span style="text-decoration:underline;font-weight:bolder;" t-field="o.pr22"></span> 
+								<span t-field="o.pr23"></span>
+							</p>
+							<div style="margin-top:20px;font-size:30px;font-weight:bolder;margin-left:520px;">
+								<span t-field="o.pr24"></span>
+							</div>
+							<p style="margin-top:10px; text-align:justify;">
+								<span style=" font-size:30px;font-weight:bolder;text-decoration:underline;" t-field="o.pr25"></span>
+								<br/>
+								<div style="display:flex;">
+									<div style="text-align:left;font-style:italic;">
+										<span t-field="o.pr26"></span>
+										<span style="margin-left:110px;" t-field="o.pr27"></span><br/>
+										<span t-field="o.pr28"></span>
+										<span style="margin-left:100px;" t-field="o.pr29"></span><br/>
+										<span t-field="o.pr30"></span>
+										<span style="margin-left:100px;" t-field="o.pr31"></span><br/>
+										<span t-field="o.pr32"></span>
+										<span style="margin-left:100px;" t-field="o.pr33"></span>
+									</div>
+								</div>
+							</p>
+							<div style="margin-top:20px;font-size:30px;font-weight:bolder;margin-left:520px;text-align:right;">
+								<span t-field="o.pr34"></span>
+							</div>
+							<h2 style="text-align:right;margin-top:50px;"><span style="font-weight:bolder; text-decoration:underline;" t-field="o.pr35"></span><br/><span style="margin-left:400px;font-style:italic;font-size:25px;" t-field="o.pr36"></span></h2>
+						</div>
+					</div>
+				</t>
+		</t>
+	</template>
+</odoo>

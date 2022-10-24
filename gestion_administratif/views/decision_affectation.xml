@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record model="ir.ui.view" id="decision_affectation_tree_view">
+		<field name="name">Décision d'affectation</field>
+		<field name="model">document.decisionaffectation</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="emp"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="decision_affectation_form_view">
+		<field name="name">Décision d'affectation</field>
+		<field name="model">document.decisionaffectation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="t2"></field>
+					</group>
+					<group>
+						<field name="p1"></field>
+					</group>
+					<group>
+						<field name="p2"></field>
+					</group>
+					<group>
+						<field name="p3"></field>
+					</group>
+					<group>
+						<field name="p4"></field>
+					</group>
+					<group>
+						<field name="p5"></field>
+					</group>
+					<group>
+						<field name="p6"></field>
+					</group>
+					<group>
+						<field name="p7"></field>
+					</group>
+					<group>
+						<field name="p8"></field>
+					</group>
+					<group>
+						<field name="p9"></field>
+					</group>
+					<group>
+						<field name="p10"></field>
+					</group>
+					<group>
+						<field name="p11"></field>
+					</group>
+					<group>
+						<field name="p12"></field>
+					</group>
+					<group>
+						<field name="p13"></field>
+					</group>
+					<group>
+						<field name="p14"></field>
+					</group>
+					<group>
+						<field name="p15"></field>
+					</group>
+					<group>
+						<field name="p16"></field>
+					</group>
+					<group>
+						<field name="p17"></field>
+					</group>
+					<group>
+						<group>
+							<field name="p18"></field>
+						</group>
+						<group>
+							<field name="p19"></field>
+						</group>
+						<group>
+							<field name="p20"></field>
+						</group>
+						<group>
+							<field name="p21"></field>
+						</group>
+						<group>
+							<field name="p22"></field>
+						</group>
+						<group>
+							<field name="p23"></field>
+						</group>
+						<group>
+							<field name="p24"></field>
+						</group>
+						<group>
+							<field name="p25"></field>
+						</group>
+						<group>
+							<field name="p26"></field>
+						</group>
+						<group>
+							<field name="p27"></field>
+						</group>
+						<group>
+							<field name="p28"></field>
+						</group>
+						<group>
+							<field name="p29"></field>
+						</group>
+						<group>
+							<field name="p30"></field>
+						</group>
+						<group>
+							<field name="p31"></field>
+						</group>
+						<group>
+							<field name="p32"></field>
+						</group>
+						<group>
+							<field name="p33"></field>
+						</group>
+						<group>
+							<field name="p34"></field>
+						</group>
+					</group>
+					<notebook>
+						<page name="agent" string="Agents">
+							<field name="emp"></field>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="poste_affectation_tree_view">
+		<field name="name">Poste d'affectation</field>
+		<field name="model">document.posteaffectation</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="n_poste"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="poste_affectation_form_view">
+		<field name="name">Poste d'affectation</field>
+		<field name="model">document.posteaffectation</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="n_poste"></field>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="agent_af_tree_view">
+		<field name="name">Agent affectation</field>
+		<field name="model">document.agentaffecte</field>
+		<field name="arch" type="xml">
+			<tree>
+				<field name="em"></field>
+				<field name="mat"></field>
+				<field name="emploi"></field>
+				<field name="poste_aff"></field>
+			</tree>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="agent_af_form_view">
+		<field name="name">Agent affectation</field>
+		<field name="model">document.agentaffecte</field>
+		<field name="arch" type="xml">
+			<form>
+				<sheet>
+					<group>
+						<field name="em"></field>
+						<field name="mat"></field>
+						<field name="emploi"></field>
+						<field name="poste_aff"></field>
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+</odoo>
